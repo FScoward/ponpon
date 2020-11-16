@@ -19,6 +19,8 @@ fun main() = Window(title = "Compose for Desktop", size = IntSize(300, 300)) {
             Button(modifier = Modifier.align(Alignment.CenterHorizontally),
                    onClick = {
                        count.value++
+                     Messenger.open()
+                     Messenger.send()
                    }) {
                 Text(if (count.value == 0) "Hello World" else "Clicked ${count.value}!")
             }
